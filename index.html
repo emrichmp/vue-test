@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>vueJS test</title>
+          <script src="https://unpkg.com/vue@next"></script>
+     </head>
+     <body>
+          Hello World
+
+          <div id="app">
+              <p> {{ title }} - {{ author }} - {{ age }}</p>
+              <button v-on:click="age++">Increase Age</button>
+              <button v-on:click="age--">Decrease Age</button>
+              <button @click="changeTitle('Twilight')">Change Book Title</button>
+          </div>
+          <script src="app.js"></script>
+     </body>
+</html>
