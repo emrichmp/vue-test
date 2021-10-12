@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>vueJS test</title>
+          <script src="https://unpkg.com/vue@next"></script>
+          <style>
+               .box {
+                    padding: 100px 0;
+                    width: 400px;
+                    text-align: center;
+                    background: #ddd;
+                    margin: 20px;
+                    display: inline-block;
+               }
+          </style>
+     </head>
+     <body>
+          Hello World
+
+          <div id="app">
+              <a v-bind:href="url">link</a>
+            <!-- v-bind will make the attr in here dynamic -> used ALOT -->
+            <br>
+            <a :href="url">link</a>
+            <!-- :href does the same thing-->
+            <!-- Can be used for other things such as images too-->
+
+          </div>
+          <script src="app.js"></script>
+     </body>
+</html>
