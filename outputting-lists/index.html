@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>vueJS test</title>
+          <script src="https://unpkg.com/vue@next"></script>
+          <style>
+               .box {
+                    padding: 100px 0;
+                    width: 400px;
+                    text-align: center;
+                    background: #ddd;
+                    margin: 20px;
+                    display: inline-block;
+               }
+          </style>
+     </head>
+     <body>
+          Hello World
+
+          <div id="app">
+            <div v-if="showBooks">
+                <ul>
+                    <li v-for="book in books">
+                        <h3> {{ book.title }} </h3>
+                        <p> By: {{ book.author }} </p>
+                    </li>
+                </ul>
+            </div>
+
+            <button @click="toggleShowBooks">
+                <span v-if="showBooks">Hide Books</span>
+                <span v-else> Show books </span>
+            </button>
+
+            <!-- <div v-show="showBooks">currently showing books</div> -->
+            <!-- shows by changing css display attr to display none, it's better
+            to use v-show for performance purposes-->
+          </div>
+          <script src="app.js"></script>
+     </body>
+</html>
